@@ -12,7 +12,7 @@ def main():
     b = int(argv[3])
     op = argv[2]
 
-    op_dict = {"+": add, "-": sub, "*": mul, "/": div}
+    op_dict = {'+': add, '-': sub, '*': mul, '/': div}
     if op not in op_dict:
         print("Unkown operator. Available operators: +, -, * and /")
         exit(1)
