@@ -2,7 +2,6 @@
 import hidden_4
 
 if __name__ == "__main__":
-    names = dir(hidden_4)
-    for name in names:
+    for name in dir(hideen_4):
         if "__" not in name:
-            print("{}".format(str(name)))
+            print(name)
