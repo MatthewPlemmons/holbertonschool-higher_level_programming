@@ -17,7 +17,7 @@ def main():
         print("Unkown operator. Available operators: +, -, * and /")
         exit(1)
 
-    print("{:d} {:s} {:d} = {:d}".format(a, op, b, op_dict[op](a, b)))
+    print("{:d} {:c} {:d} = {:d}".format(a, op, b, op_dict[op](a, b)))
     exit(0)
 
 if __name__ == "__main__":
