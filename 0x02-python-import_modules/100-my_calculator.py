@@ -3,7 +3,7 @@ from sys import argv
 from calculator_1 import add, sub, mul, div
 
 
-if __name__ == "__main__":
+def main():
     if len(argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
@@ -19,3 +19,6 @@ if __name__ == "__main__":
 
     print("{:d} {} {:d} = {:d}".format(a, op, b, op_dict[op](a, b)))
     exit(0)
+
+if __name__ == "__main__":
+    main()
