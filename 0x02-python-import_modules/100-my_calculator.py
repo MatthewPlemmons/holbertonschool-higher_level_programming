@@ -4,7 +4,7 @@ from calculator_1 import add, sub, mul, div
 
 
 def main():
-    if len(argv) - 1 != 3:
+    if len(argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
@@ -13,8 +13,8 @@ def main():
     op = argv[2]
 
     op_dict = {"+": add, "-": sub, "*": mul, "/": div}
-    if str(op) not in op_dict:
-        print("Unkown operator.  Available operators: +, -, * and /")
+    if op not in op_dict:
+        print("Unkown operator. Available operators: +, -, * and /")
         exit(1)
 
     print("{:d} {} {:d} = {:d}".format(a, op, b, op_dict[op](a, b)))
