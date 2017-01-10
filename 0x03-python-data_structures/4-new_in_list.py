@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def new_in_list(my_list, idx, element):
     list_copy = list(my_list)
     if not list_copy or my_list is None:
