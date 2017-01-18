@@ -1,0 +1,58 @@
+=====================
+Using ``add_integer``
+=====================
+
+This is a simple function for adding two integers and
+returning the value.
+
+Ints and Floats
+--------------- 
+
+``add_integer()`` only handles integer and floating-point 
+values.
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(2, 3)
+	5
+
+	>>> add_integer(10.6, -9)
+	1
+
+	>>> add_integer(2**5, -3.78)
+	29
+
+Other Datatypes
+---------------
+
+String values will raise an error message.
+
+::
+		
+	>>> add_integer("no", 199)
+	'a must be an integer'
+
+	>>> add_integer(123, "yes")
+	'b must be an integer'
+
+	>>> add_integer(no, '1')
+	Traceback (most recent call last):
+	NameError: name 'no' is not defined
+
+Inputting the wrong number of values will also trigger an
+error, ``add_integer()`` only accepts two arguments.
+
+::
+
+	>>> add_integer(1, 2, ...) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: add_integer() takes 2 positional arguments but ...
+
+	>>> add_integer(500)
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'b'
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'

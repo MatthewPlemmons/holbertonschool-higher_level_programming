@@ -1,7 +1,16 @@
 #!/usr/bin/python3
 
+""" 
+A simple module for the add_integer function.
+
+"""
 
 def add_integer(a, b):
+    """
+    Returns the sum of a and b.
+
+    """
+
     c, d = 0, 0
     try:
         c = a + 1
