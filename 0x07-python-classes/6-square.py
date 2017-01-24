@@ -39,7 +39,7 @@ class Square:
 
     def my_print(self):
         for n in range(self.__position[1]):
-            print("")
+            print(" ")
         for n in range(self.__size):
             for i in range(self.__position[0]):
                 print(" ", end="")
