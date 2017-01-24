@@ -1,0 +1,55 @@
+===============================
+``Square`` class in 4-square.py
+===============================
+
+A simple class containing two attributes, a field for storing integer
+input and a method for returning the square of that field.
+
+Usage
+=====
+
+Import the class into your Python interpreter to use.  Pass in an
+integer for the size field and then call the ``area()`` method to
+get the square.
+
+::
+
+	>>> Square = __import__('4-square').Square
+	>>> sq = Square(6)
+	>>> print("Area: {} for size: {}".format(sq.area(), sq.size))
+	Area: 36 for size: 6
+
+	>>> sq.size = 36
+	>>> print("Area: {} for size: {}".format(sq.area(), sq.size))
+	Area: 1296 for size: 36
+
+Tests
+=====
+
+This class only accepts integers and values greater than or equal to 0.
+
+::
+
+	>>> sq.size = "Hello"
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> sq.size = 2.5
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> sq.size = -45
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+	>>> sq1 = Square(2, 4, ...) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: __init__() takes from 1 to 2 positional arguments but ...
+
+	>>> sq2 = Square()
+	>>> sq2.area()
+	0
+
+	>>> sq2.area(5, ...) #doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: area() takes 1 positional argument but ...
