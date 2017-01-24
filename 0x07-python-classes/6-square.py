@@ -29,6 +29,8 @@ class Square:
         if (
                 not isinstance(value, tuple) or
                 len(value) is not 2 or
+                type(value[0]) is not int or
+                type(value[1]) is not int or
                 value[0] < 0 or
                 value[1] < 0
         ):
