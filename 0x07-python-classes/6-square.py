@@ -41,7 +41,7 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        [print(" ") for n in range(self.__position[1])]
+        [print("") for n in range(self.__position[1])]
         for n in range(self.__size):
             print("{}{}".format(self.__position[0] * " ",
                                 self.__size * "#"), end="")
