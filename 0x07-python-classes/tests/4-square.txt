@@ -53,3 +53,21 @@ This class only accepts integers and values greater than or equal to 0.
 	>>> sq2.area(5, ...) #doctest: +ELLIPSIS
 	Traceback (most recent call last):
 	TypeError: area() takes 1 positional argument but ...
+
+	>>> sq = Square(None)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> sq = Square(True)
+	>>> sq.size
+	True
+	>>> sq.area()
+	1
+
+	>>> sq = Square(Square())
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> sq = Square(-100)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
