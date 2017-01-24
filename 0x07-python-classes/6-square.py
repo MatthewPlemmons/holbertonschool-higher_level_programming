@@ -25,7 +25,6 @@ class Square:
 
     @position.setter
     def position(self, value):
-
         if (
                 not isinstance(value, tuple) or
                 len(value) is not 2 or
@@ -44,8 +43,8 @@ class Square:
     def my_print(self):
         [print("") for n in range(self.__position[1])]
         for n in range(self.__size):
-            [print(" ", end="") for n in range(self.__position[0])]
-            [print("#", end="") for n in range(self.__size)]
+            [print("{}{}".format(self.__position[0] * " ",
+                                 self.__size * "#"), end="")]
             print("")
 
         if self.__size == 0:
