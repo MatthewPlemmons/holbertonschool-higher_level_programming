@@ -47,4 +47,3 @@ class Rectangle:
         for x in range(self.__height):
             s += self.__width * "#" + "\n"
         return s[:-1]
-        #return ("\n".join(["#" * self.__width for i in range(self.__height)]))
