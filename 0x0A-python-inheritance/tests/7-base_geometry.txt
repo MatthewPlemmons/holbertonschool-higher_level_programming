@@ -1,0 +1,42 @@
+================================================
+Class ``BaseGeometry`` in 7-base_geometry.py
+================================================
+
+A simple class with a method for validating input.
+
+Usage
+=====
+
+Import class into the intepreter to use.  The
+method ``integer_validator`` accepts a string and
+an integer as input.
+
+::
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 15)
+	>>> bg.integer_validator("width", 50)
+
+Tests
+=====
+
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg.integer_validator("hi")
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bg.integer_validator("hi","bye")
+	Traceback (most recent call last):
+	TypeError: hi must be an integer
+
+	>>> bg.integer_validator("hello", 0)
+	Traceback (most recent call last):
+	ValueError: hello must be greater than 0
+
+	>>> bg.integer_validator("foo", -25)
+	Traceback (most recent call last):
+	ValueError: foo must be greater than 0
