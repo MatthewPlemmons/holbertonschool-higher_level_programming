@@ -10,3 +10,6 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states")
     for n in cursor.fetchall():
         print(n)
+
+    cursor.close()
+    db.close()
