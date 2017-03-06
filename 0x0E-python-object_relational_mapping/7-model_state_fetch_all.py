@@ -2,14 +2,12 @@
 """Lists states from the database hbtn_0e_6_usa"""
 
 from sys import argv as a
-import MySQLdb
+from sqlalchemy import create_engine
+
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=a[1], passwd=a[2], db=a[3])
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM states")
-    for n in cursor.fetchall():
+    engine = create_engine("mysql://{}:{}@localhost:3306/{}"
+                           .format(a[1], a[2], a[3]))
+    states = engine.execute("SELECT * FROM states")
+    for n in states:
         print("{}: {}".format(n[0], n[1]))
-
-    cursor.close()
-    db.close()
