@@ -3,8 +3,8 @@ import sqlalchemy
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-"""Model of state table"""
 
+"""Model of state table"""
 
 Base = declarative_base()
 
