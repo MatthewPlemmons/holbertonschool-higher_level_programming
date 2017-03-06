@@ -16,4 +16,5 @@ if __name__ == "__main__":
     state = State(name="Louisiana")
     sess.add(state)
     sess.commit()
-    print(state.id)
+    new_state = sess.query(State).filter_by(name="Louisiana").first()
+    print("{}".format(new_state.id))
